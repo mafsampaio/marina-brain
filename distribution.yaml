@@ -1,0 +1,16 @@
+name: marina
+version: 1.0.0
+description: "Marina — consultora da FSampaio Viagens (agência boutique). Atende no WhatsApp/Telegram, entende o cliente e opera a agência (cotação, reserva, financeiro, curadoria/roteiro) via a API do painel fsampaioviagens.com."
+hermes_requires: ">=0.12.0"
+author: "FSampaio Viagens"
+license: "UNLICENSED"
+
+# Variáveis que o instalador precisa ter no .env do profile.
+env_requires:
+  - name: FSAMPAIO_URL
+    description: "URL do painel FSampaio (backend das operações da agência)"
+    required: false
+    default: "https://fsampaioviagens.com"
+  - name: AGENT_API_SECRET
+    description: "Segredo da ponte /api/agent/tool (header x-agent-secret) — o mesmo WHATSAPP_WEBHOOK_SECRET do painel"
+    required: true

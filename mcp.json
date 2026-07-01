@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "fsampaio": {
+      "command": "node",
+      "args": ["marina-mcp.mjs"],
+      "env": {
+        "FSAMPAIO_URL": "${FSAMPAIO_URL}",
+        "AGENT_API_SECRET": "${AGENT_API_SECRET}"
+      },
+      "timeout": 120,
+      "connect_timeout": 30,
+      "enabled": true
+    }
+  }
+}

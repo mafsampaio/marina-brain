@@ -1,0 +1,10 @@
+# Cérebro da Marina: gpt-5.5 via assinatura ChatGPT (openai-codex), $0/token.
+# O Grok entra como fallback depois (hermes fallback add xai-oauth).
+model:
+  default: gpt-5.5
+  provider: openai-codex
+  base_url: ''
+providers: {}
+fallback_providers: []
+toolsets:
+  - hermes-cli
