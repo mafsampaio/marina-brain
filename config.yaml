@@ -8,3 +8,26 @@ providers: {}
 fallback_providers: []
 toolsets:
   - hermes-cli
+
+# Ferramentas da agência (a mesma fonte única do painel), via o MCP local.
+# ${HOME} e as env vars são interpoladas pelo Hermes na hora de subir o servidor.
+mcp_servers:
+  fsampaio:
+    command: node
+    args:
+      - ${HOME}/.hermes/profiles/marina/marina-mcp.mjs
+    env:
+      FSAMPAIO_URL: ${FSAMPAIO_URL}
+      AGENT_API_SECRET: ${AGENT_API_SECRET}
+    enabled: true
+    timeout: 60
+    connect_timeout: 20
+    # SEGURANÇA (fase de teste): tira as ferramentas destrutivas do alcance da Marina.
+    # Reabrir depois, com gate de aprovação humano, quando ela estiver validada.
+    tools:
+      exclude:
+        - excluir_cliente
+        - excluir_cotacao
+        - excluir_reserva
+        - excluir_lancamento
+        - excluir_conta
