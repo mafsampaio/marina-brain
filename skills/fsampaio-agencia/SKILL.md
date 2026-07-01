@@ -23,6 +23,7 @@ Todas as ações passam pelas ferramentas `fsampaio_*` (MCP). Elas são a **font
 ## Achar, detalhar e corrigir (você faz tudo pelo chat)
 - `buscar` (por nome, destino, CPF, nº de reserva…) — devolve os hits com a **classificação** de cada contato.
 - `ficha_cliente` (clienteId) — a FICHA 360 pra detalhes: cadastro + classificação + **histórico de viagens** (inclui as reservas onde a pessoa foi só PASSAGEIRA, que a busca não mostra) + lançamentos. Use SEMPRE que pedirem detalhe/histórico de alguém ("me conta sobre o fulano", "o que ele já viajou").
+- `grupo_de_viagem` (clienteId) — a **FAMÍLIA / GRUPO** com quem a pessoa costuma viajar (derivado dos passageiros reais), por frequência, já com o clienteId de cada um. Use pra "com quem o fulano viaja?" e, principalmente, **ao PLANEJAR**: pense na família toda, não só em quem pediu.
 - `atualizar_cliente`, `editar_reserva`, `editar_viagem` (produtos/passageiros), `anotar_observacao`.
 
 ### Diferencie os contatos — NUNCA chame todo mundo de "cliente"
