@@ -9,6 +9,13 @@ fallback_providers: []
 toolsets:
   - hermes-cli
 
+# Canal WhatsApp — a Marina atende SÓ Fernanda + Marcio (WHATSAPP_ALLOWED_USERS no .env).
+# Cliente (fora do allowlist) é IGNORADO em silêncio. Todo texto é espelhado no painel
+# pelo patch do bridge (PANEL_WEBHOOK_URL). O Evolution saiu; o Hermes é a única conexão.
+whatsapp:
+  unauthorized_dm_behavior: ignore   # cliente fora do allowlist = silêncio total
+  reply_prefix: ""                   # sem header "Hermes Agent" — a Marina assina sozinha
+
 # Ferramentas da agência (a mesma fonte única do painel), via o MCP local.
 # ${HOME} e as env vars são interpoladas pelo Hermes na hora de subir o servidor.
 mcp_servers:
