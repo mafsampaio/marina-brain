@@ -20,8 +20,8 @@ whatsapp:
   group_policy: disabled             # ignora qualquer grupo
   unauthorized_dm_behavior: ignore   # cliente fora do allowlist = silêncio total
   reply_prefix: ""                   # sem header "Hermes Agent" — a Marina assina sozinha
-  bridge_port: 3001                  # porta própria (default usa 3000)
-  session_path: /home/hermesme/.hermes/profiles/marina/whatsapp/session   # sessão isolada
+  # sessão: fica no padrão HERMES_HOME/platforms/whatsapp/session (já isolado, pois o
+  # HERMES_HOME da Marina é o profile dela). session_path custom NÃO é bridgeado pro gateway.
 
 # Ferramentas da agência (a mesma fonte única do painel), via o MCP local.
 # ${HOME} e as env vars são interpoladas pelo Hermes na hora de subir o servidor.
