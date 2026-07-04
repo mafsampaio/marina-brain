@@ -15,8 +15,10 @@ toolsets:
 whatsapp:
   dm_policy: allowlist               # só quem está no allow_from é atendido
   allow_from:
-    - "5585987495322"                # Fernanda
-    - "5585987072409"                # Marcio
+    - "5585987495322"                # Fernanda (com 9)
+    - "558587495322"                 # Fernanda (sem 9 — como o WhatsApp apresenta)
+    - "5585987072409"                # Marcio (com 9)
+    - "558587072409"                 # Marcio (sem 9)
   group_policy: disabled             # ignora qualquer grupo
   unauthorized_dm_behavior: ignore   # cliente fora do allowlist = silêncio total
   reply_prefix: ""                   # sem header "Hermes Agent" — a Marina assina sozinha
